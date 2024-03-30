@@ -1,0 +1,861 @@
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+    width: 3px;
+    transition: width 1s;
+}
+::-webkit-scrollbar:hover{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(248, 188, 84);
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(2, 6, 12);
+}
+*{
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:white;
+    display: flex;
+    z-index: 100000;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 40px;
+    padding-block:10px ;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    transition: top .4s ;
+    color:rgb(61, 65, 82);
+    color: white;
+}
+.left-container{
+    display: flex;
+    overflow: hidden;
+}
+.left-container>img{
+    height: 100%;
+    width: 100%;
+    max-width: 180px;
+    object-position: center;
+    object-fit: contain;
+    transition: .39s;
+    transform: scale(.9);
+}
+.left-container>img:hover{
+    transform: scale(1);
+}
+.right-container{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: .95em;
+    letter-spacing: 1px;
+
+}
+.right-container>a,.mobile-view-right-container a{
+    text-decoration: none;
+    color:rgb(61, 65, 82);
+    color: inherit;
+}
+.right-container>*{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+.right-container>*:hover{
+    color: rgb(252, 128, 25);
+}
+.mobile-view-right-container{
+    display: none;
+    position: relative;
+}
+.more-options-container{
+    position: fixed;
+    top:0;
+    left: 0;
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 20px;
+    padding-top: 30px;
+    bottom: 0;
+    background-color: rgb(14, 13, 12);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgb(61, 65, 82);
+    transform: translateX(-100%);
+    transition: transform .8s;
+}
+.more-options-header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 30px;
+}
+.more-options-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    border-top:.5px solid rgb(184, 187, 197) ;
+    border-bottom: .25px solid rgb(184, 187, 197);
+}
+.more-options-header>img{
+    width: 150px;
+}
+.cross-mark{
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.cross-mark>i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(184, 187, 197);
+}
+.more-options-details>*{
+    padding:15px 10px;
+    text-transform: uppercase;
+    font-family: 'Forum';
+    letter-spacing: 1px;
+    gap: 10px;
+    width: 100%;
+    color:inherit;
+    border-bottom: .25px solid rgb(184, 187, 197);
+    border-top: .25px solid rgb(184, 187, 197);
+    font-weight: 500;
+}
+.more-options-details>*:hover,.more-options-details>*:active,.visiting-email:hover{
+    color: rgb(228, 197, 144);
+}
+.visiting-details-container,.contact-details{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: .9em;
+    text-align: center;
+    color: rgb(196, 198, 205);
+}
+.visit-header{
+    color: white;
+    font-size: 35px;
+    font-family: 'Forum';
+    letter-spacing: 2px;
+}
+.visiting-details-container>*{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    line-height: 22px;
+}
+.booking-request{
+    font-weight:bold ;
+    color: white;
+    letter-spacing: 2px;
+}
+a.contact-no{
+    color: rgb(228, 197, 144);
+    font-size: 20px;
+}
+#more-opt{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#more-opt>span{
+    height: 3px;
+    width: 20px;
+    cursor: pointer;
+    animation:menuEl .5s alternate infinite;
+    background-color: rgb(61, 65, 82);
+    border-radius: 10px;
+}
+#more-opt>span:nth-child(2){
+    animation-delay: 0.175s;
+}
+#more-opt>span:nth-child(3){
+    animation-delay: 0.35s;
+}
+@keyframes menuEl {
+    0%{
+        width: 7px;
+    }100%{
+        width: 25px;
+    }
+} 
+/* 
+..........................
+..........................
+main 
+............................
+............................
+*/
+
+main{
+    margin-top:40px; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+section{
+    margin-inline: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    padding: 20px;
+}
+.ordering-template{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    line-height: 48px;
+    overflow: hidden;
+    color:rgba(2,6,12,0.75);
+    font-weight: 800;
+    letter-spacing: -0.43px;
+    background:linear-gradient(0deg, rgb(201, 188, 244) 0%, rgb(255, 255, 255) 95.83%) ;
+}
+.ordering-template>img{
+    width: 10px;
+    flex: .8;
+}
+.ordering-template>div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.ordering-template>div>svg{
+    width: 80%;
+}
+.food-header{
+    padding: 0 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.arrow-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.arrow-container>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(226, 226, 231);
+    cursor: pointer;
+    border-radius: 50%;
+}
+.left-arrow{
+    opacity: .4;
+}
+.food-varieties-container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.foods-overview{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    overflow: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.foods-overview>div{
+    min-height: 130px;
+    padding: 10px;
+    min-width: 130px;
+    cursor: pointer;
+}
+.southIndian-container,.dessert-container,.chinesefood-container,.grill-container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 20px;
+}
+.southIndian-foods-overview,.dessert-overview,.chinese-overview,.grillshawarma-overview{
+    display: flex;
+    gap: 12px;
+    overflow: auto;
+    scrollbar-width: none;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+}
+
+.food-types>img{
+    width: 100%;
+    aspect-ratio: auto 144/180;
+}
+.southIndian-foods-overview>div,.dessert-overview>div,.chinese-overview>div,.grillshawarma-overview>div{
+    transition: .3s;
+    width: 350px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+}
+.southIndian-foods-overview>div:hover,.dessert-overview>div:hover,.chinese-overview>div:hover,.grillshawarma-overview>div:hover{
+    transform: scale(.935);
+}
+.food-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+}
+.southIndian-foods-overview>div>img,.dessert-overview>div>img,.chinese-food>img,.grill>img{
+    width: 252px;
+    object-fit: cover;
+    border-radius: 20px;
+    height: 181px;
+}
+h1{
+    color:rgba(2, 6, 12, 0.92);
+    transition: .1s;
+}
+h1:hover{
+    color: rgb(252, 128, 25);
+}
+.ratings-container{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: bold;
+}
+.rating-img{
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+}
+.food-details{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.food-name{
+    margin-top: 10px;
+    color: rgba(2, 6, 12, 0.75);
+    font-size: 18px;
+    font-weight: bold;
+}
+.food-price{
+    font-family: 'Roboto';
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    gap: 8px;
+    color: rgba(2, 6, 12, 0.72);
+    font-size: 20px;
+}
+.curr-price>del{
+    font-weight: 300;
+}
+.curr-price{
+    display: flex;
+    gap: 10px;
+}
+.restaurant-details{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(14, 13, 12);
+}
+.restaurent-features{
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    background-color: rgb(28, 28, 28);
+    background: url(images/background/shape-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    animation: up_and_down 20s linear infinite;
+}
+.features-head1{
+    color: rgb(228, 197, 144);
+    font-size: .9em;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.features-head2{
+    color: white;
+    font-size: 48px;
+    font-family: 'Forum';
+}
+.features-overview{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    font-family: 'Forum';
+    gap: 40px;
+}
+.features{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 20px;
+    font-size: 20px;
+    flex: 1;
+    cursor: pointer;
+}
+@keyframes rotate_img {
+    100%{
+        transform: rotate(1turn);
+    }
+}
+.feature-img-rotater{
+    animation:rotate_img .4s;
+}
+.features>img{
+    aspect-ratio: auto 100/80;
+    object-fit: cover;
+}
+.features:nth-child(even){
+    background-color:rgb(19, 19, 19) ;
+}
+.features:nth-child(odd){
+    background-color: rgb(24, 21, 21);
+}
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.feature-quotes{
+    color: white;
+    font-family: 'Forum';
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+}
+.features>.quotes{
+    font-size: .8em;
+    color: rgb(184, 187, 197);
+}
+.customer-review-container{
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    background: url(images/background/customer-review.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    justify-content: space-around;
+}
+.customer-review{
+    font-family: 'Forum';
+    font-size: 39.4px;
+    line-height: 55.16px;
+    color: white;
+}
+.customer-img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: rgb(228, 197, 144);
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.customer-img-container>img{
+    border-radius: 50%;
+}
+.chef-container{
+    display: flex;
+    font-family: 'Forum';
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px;
+    background: url(images/background/shape-5.png);
+    background-color: rgb(14, 13, 12);
+    text-align: center;
+    animation:up_and_down 20s linear infinite;
+    background-attachment: fixed;
+}
+.chef-details-container{
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: .6;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
+.chef-head{
+    letter-spacing: 8px;
+    font-weight: bold;
+    font-family: 'Be Vietnam Pro';
+    font-size: .9em;
+    color: rgb(228, 197, 144);
+}
+.booking{
+    font-weight: bold;
+    font-family: 'Be Vietnam Pro';
+    color: white;
+    letter-spacing: 2px;
+}
+.chef-details-container>.phone{
+    font-size: 1.25em;
+    font-family: 'Be Vietnam Pro';
+    color: rgb(228, 197, 144);
+    cursor: pointer;
+    padding: 15px 30px;
+    transition: .2s;
+    border: 1px solid rgb(228, 197, 144);
+}
+.chef-details-container>.phone:hover{
+    background-color: rgb(228, 197, 144);
+    color: rgb(14, 13, 12);
+}
+.chef-quotes{
+    font-size: 48px;
+}
+.chef-details{
+    line-height: 23px;
+    font-size: 18px;
+}
+.chef-img{
+    flex: .5;
+}
+.chef-img>img{
+    width: 100%;
+    cursor: pointer;
+    transition: .2s;
+    aspect-ratio:  570 / 570;
+    object-fit: contain;
+    object-position: center;
+}
+.chef-img>img:hover,.special-dish-img>img:hover{
+    transform: scale(1.02);
+}
+@keyframes up_and_down {
+    0%{
+        background-position: top;
+    }
+    25%{
+        background-position: center;
+    }
+    50%{
+        background-position: bottom;
+    }
+    75%{
+        background-position: center;
+    }
+    100%{
+        background-position: top;
+    }
+}
+.special-dish-container{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding:60px 30px;
+    background: rgb(22, 23, 24);
+} 
+.special-dish-img{
+    flex: 1.3;
+}
+.special-dish-img>img{
+    width: 100%;
+    height: 100vh;
+    transition: .2s;
+    cursor: pointer;
+    object-fit: contain;
+    object-position: center;
+}
+.special-dish-details{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.special-dish-head{
+    color: rgb(228, 197, 144);
+    letter-spacing: 4.8px;
+    font-weight: bold;
+}
+.special-dish-name{
+    font-size: 48px;
+    font-family: 'Forum';
+}
+.special-dish{
+    line-height: 25px;
+    font-family: 'Forum';
+    font-size: 18px;
+}
+.special-dish-price{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgb(184, 187, 197);
+    letter-spacing: 3px;
+}
+.special-dish-price>span{
+    letter-spacing: 3px;
+    color: rgb(228, 197, 144);
+    font-size: 24px;
+}
+.special-dish-buy>button{
+    color: rgb(228, 197, 144);
+    padding: 16px 40px;
+    font-weight: bold;
+    letter-spacing: 4.8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid rgb(228, 197, 144);
+    transition: .2s linear;
+}
+.special-dish-buy>button:hover{
+    background-color: rgb(228, 197, 144);
+    color:rgb(14, 13, 12);
+}
+.booking-table-container{
+    display: flex;
+    background: url(images/background/shape-6.png);
+    background-color: rgb(14, 13, 12);
+    animation: up_and_down 20s linear infinite;
+    background-attachment: fixed;
+    padding: 100px 80px;
+    color: white;
+}
+.online-reservation-container{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    padding:100px 50px;
+    align-items: center;
+    background-color: rgb(18,18,18);
+    text-align: center;
+    gap: 35px;
+}
+.reservation-header-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.reservation-header{
+    font-size: 48px;
+    font-family: 'Forum';
+}
+.reservation-call{
+    font-size: .9em;
+}
+.reservation-call>a{
+    color: rgb(228, 197, 144);
+}
+.booking-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.name>input,.person-details>input,.phone-no>input,.date>input{
+    padding: 10px;
+    background-color: rgb(27, 28, 29);
+    border: 1px solid rgba(236, 213, 175, 0.286);
+    outline:none;
+    color: white;
+    font-family: 'Be Vietnam Pro';
+    cursor: pointer;
+}
+.booking-input-container>textarea{
+    outline: none;
+    padding: 10px;
+    background-color: rgb(27, 28, 29);
+    border:1px solid rgba(236, 213, 175, 0.286);
+    color: white;
+    font-family:'Be Vietnam Pro';
+    cursor: pointer;
+    height: 100px;
+    resize: none;
+}
+.booking-input-container>textarea::placeholder,.name>input::placeholder,.phone-no>input::placeholder{
+    color: white;
+}
+.number-of-persons,.time-container{
+    position: relative;
+}
+.number-of-persons>i,.time-container>i{
+    position: absolute;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+.name-details,.person-details{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.name,.name,.phone-no{
+    width: 100%;
+}
+.person-details,.time-container,.number-of-persons,.date{
+    width: 100%;
+}
+.name > input,
+.phone-no > input,
+.number-of-persons > select,
+.time-container > select,.date>input{
+    width: calc(100% - 20px);
+}
+.number-of-persons>select,.time-container>select{
+    color: white;
+    background-color: rgb(27, 28, 29);
+    padding: 10px 30px;
+    width: 100%;
+    border: 1px solid rgba(236, 213, 175, 0.286);
+    outline: none;
+    cursor: pointer;
+}
+.book-table{
+    background-color: rgb(228, 197, 144);
+    border: none;
+    border: 1px solid rgba(236, 213, 175, 0.286);
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px;
+}
+.avalaible-details{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: url(images/background/form-pattern.png);
+    background-color: rgb(18,18,18);
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding:30px;
+}
+.available-header{
+    font-size: 48px;
+    font-family: 'Forum';
+}
+.booking-request,.location-details-container,.location-details-container>div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+}
+.location-details-container>div{
+    gap: 5px;
+    line-height: 21px;
+}
+.booking-request>div:first-child,.location-details-container>div>div:first-child{
+    font-weight: bold;
+    font-size: .9em;
+}
+.booking-request>a{
+    color: rgb(228, 197, 144);
+    cursor: pointer;
+    font-size: 30px;
+}
+.location-details-container>div>div:last-child{
+    font-size: .8em;
+    color: rgb(184, 187, 197);
+}
+/* 
+.............................
+footer 
+.............................
+*/
+footer{
+    background-color: rgb(2, 6, 12);
+    padding: 40px;
+    padding-bottom: 100px;
+}
+.footer{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 5%;
+    font-weight: 300;
+    padding-bottom: 100px;
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(184, 187, 197);
+    transition: 1s;
+}
+.footer>div>h3{
+    margin: 15px 0;
+}
+.footer>div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.copyrights{
+    color: rgb(184, 187, 197);
+    text-align: center;
+}
+.copyrights a{
+    color: rgb(228, 197, 144);
+} 

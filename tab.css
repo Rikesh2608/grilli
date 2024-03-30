@@ -1,0 +1,178 @@
+@media (width>1200px){
+    .customer-review{
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@media (width<850px) {
+    .booking-table-container{
+        flex-direction: column;
+    }
+    .features-overview{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width<678px) {
+    header{
+        padding: 10px 20px;
+    }
+    .left-container>img{
+        max-width: 160px;
+        min-width: 100px;
+    }
+    .right-container{
+        display: none;
+    }
+    .mobile-view-right-container{
+        display: block;
+    }
+
+    .arrow-container{
+        display: none;
+    }
+    .food-header{
+        font-size: 14px;
+    }
+    .food-varieties-container .arrow-container{
+        display: flex;
+    }
+    .foods-overview>div{
+        min-width: 100px;
+        min-height: 100px;
+    }
+    .southIndian-foods-overview>div:hover,.dessert-overview>div:hover,.chinese-overview>div:hover,.grillshawarma-overview>div:hover{
+        transform: scale(.98);
+    }
+    .ordering-template{
+        font-size: 30px;
+        line-height: 1.3em;
+    }
+    .southIndian-foods-overview,.dessert-overview,.chinese-overview,.grillshawarma-overview{
+        flex-direction: column;
+        gap: 25px;
+    }  
+    .southIndian-foods-overview>div,.dessert-overview>div,.chinese-overview>div,.grillshawarma-overview>div{
+        overflow: hidden;
+        width: 100%;
+        flex-direction: row;
+        gap: 20px;
+        align-items: start;
+        padding: 0;
+        justify-content:start;
+    }
+    .southIndian-foods-overview>div>img,.dessert-overview>div>img,.chinese-food>img,.grill>img{
+        width: 100px;
+        object-position: center;
+        object-fit: cover;
+        height: 100px;
+        flex: .5;
+    }
+    .food-details{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1.2;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+    }
+    .food-name{
+        margin: 0;
+        width: 100%;
+        white-space:nowrap;
+        font-size: .95em;
+    }
+    .food-price{
+        flex-direction: column;
+        align-items: start;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: .95em;
+    }
+    .chef-container{
+        gap: 0;
+    }
+    .special-dish-container,.chef-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .special-dish-img>img{
+        height: 50vh;
+    }
+    .name-details,.person-details{
+        flex-direction: column;
+    }
+    .footer{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+    }
+}
+
+@media (width<540px) {
+    header{
+        padding: 15px 10px;
+    }
+    .left-container>img{
+        min-width: 80px;
+        max-width: 120px;
+    }
+    .foods-overview{
+        gap: 0;
+    }
+    .food-varieties-container,.southIndian-container,.dessert-container,.chinesefood-container,.grill-container{
+        padding:15px;
+    }
+    .chef-quotes{
+        font-size: 35px;
+    }
+    .chef-container{
+        padding: 20px;
+    }
+    .chef-details-container{
+        padding-inline: 0;
+    }
+    .features-overview{
+        grid-template-columns:1fr;
+    }
+    .booking-table-container{
+        padding: 0;
+    }
+    .customer-review{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .customer-review-container{
+        padding: 50px 20px;
+    }
+}
+
+@media (width<450px){
+    section{
+        margin-inline:5px ;
+    } 
+    .left-container>img{
+        min-width:40px;
+        max-width: 100px;
+    }
+    .food-varieties-container,.southIndian-container,.dessert-container,.chinesefood-container,.grill-container{
+        padding:10px;
+    }
+    .southIndian-foods-overview>div>img,.dessert-overview>div>img,.chinese-food>img,.grill>img{
+        min-width: 70px;
+        object-position: center;
+        height: 70px;
+        flex: .5;
+    }
+    .restaurent-features{
+        padding:30px;
+    }
+    .customer-review{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+}
+
