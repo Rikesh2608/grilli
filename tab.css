@@ -1,4 +1,7 @@
 @media (width>1200px){
+    textarea{
+        height: 150px;
+    }
     .customer-review{
         font-size: 60px;
         line-height: 70px;
@@ -6,6 +9,12 @@
 }
 
 @media (width<850px) {
+    .foods-orders-container{
+        width: 450px;
+    }
+    .foods-orders-container>img{
+        height: 300px;
+    }
     .booking-table-container{
         flex-direction: column;
     }
@@ -28,9 +37,14 @@
     .mobile-view-right-container{
         display: block;
     }
-
     .arrow-container{
         display: none;
+    }
+    .foods-orders-container{
+        width: 350px;
+    }
+    .foods-orders-container>img{
+        height: 250px;   
     }
     .food-header{
         font-size: 14px;
@@ -110,15 +124,27 @@
 }
 
 @media (width<540px) {
+    body{
+        padding-top: 80px;
+    }
     header{
         padding: 15px 10px;
     }
     .left-container>img{
-        min-width: 80px;
-        max-width: 120px;
+        min-width: 100px;
+        max-width: 160px;
+    }
+    main{
+        margin-top: 20px;
     }
     .foods-overview{
         gap: 0;
+    }
+    .foods-orders-container{
+        width: 300px;
+    }
+    .foods-orders-container>img{
+        height: 200px;
     }
     .food-varieties-container,.southIndian-container,.dessert-container,.chinesefood-container,.grill-container{
         padding:15px;
@@ -149,19 +175,30 @@
 
 @media (width<450px){
     section{
-        margin-inline:5px ;
+        margin-inline:0px ;
     } 
     .left-container>img{
-        min-width:40px;
-        max-width: 100px;
+        min-width:80px;
+        max-width: 130px;
+    }
+    .foods-orders-container{
+        width: 250px;
+        max-width: 90vw;
+    }
+    .foods-orders-container>img{
+        height: 180px;
+    }
+    .ordering-template{
+        font-size: 25px;
+        line-height: 30px;
     }
     .food-varieties-container,.southIndian-container,.dessert-container,.chinesefood-container,.grill-container{
-        padding:10px;
+        padding:10px 15px;
     }
     .southIndian-foods-overview>div>img,.dessert-overview>div>img,.chinese-food>img,.grill>img{
-        min-width: 70px;
+        min-width: 90px;
         object-position: center;
-        height: 70px;
+        height: 90px;
         flex: .5;
     }
     .restaurent-features{
@@ -174,5 +211,4 @@
     .footer{
         grid-template-columns: 1fr;
     }
-}
-
+} 
