@@ -244,9 +244,9 @@ section{
 .foods-orders-container{
     display: flex;
     flex-direction: column;
-    gap: 10px;
     position: fixed;
     top: 50vh;
+    gap: 15px;
     left: -50vw;
     transform: translate(-50%,-50%);
     border-radius: 10px;
@@ -254,11 +254,12 @@ section{
     width: 500px;
     z-index: 20000;
     padding: 10px;
+    padding-bottom: 50px;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
     transition: left .2s;
 }
 main.active-blur,header.active-blur,footer.active-blur{
-    filter:blur(10px); 
+    filter:blur(10px) brightness(.9); 
     pointer-events: none;
     user-select: none;
 }
@@ -322,9 +323,7 @@ main.active-blur,header.active-blur,footer.active-blur{
     font-weight: 600;
 }
 .price{
-    font-size: 14px;
     color: rgb(40, 44, 63);
-    font-weight: 300;
 }
 .food-description{
     color: rgb(62, 65, 82);
@@ -394,6 +393,7 @@ main.active-blur,header.active-blur,footer.active-blur{
     overflow: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    scroll-snap-align: x mandatory;
 }
 .foods-overview>div{
     min-height: 130px;
@@ -415,7 +415,6 @@ main.active-blur,header.active-blur,footer.active-blur{
     justify-content: space-between;
     scroll-behavior: smooth;
 }
-
 .food-types>img{
     width: 100%;
     aspect-ratio: auto 144/180;
@@ -855,7 +854,7 @@ h1:hover{
 .phone-no > input,
 .number-of-persons > select,
 .time-container > select,.date>input{
-    width: calc(100% - 20px);
+    width: calc(100% );
 }
 .number-of-persons>select,.time-container>select{
     color: white;

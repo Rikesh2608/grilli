@@ -141,10 +141,11 @@
         gap: 0;
     }
     .foods-orders-container{
-        width: 300px;
+        width: 350px;
+        gap: 15px;
     }
     .foods-orders-container>img{
-        height: 200px;
+        height: 250px;
     }
     .food-varieties-container,.southIndian-container,.dessert-container,.chinesefood-container,.grill-container{
         padding:15px;
