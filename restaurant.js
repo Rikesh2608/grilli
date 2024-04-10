@@ -1,7 +1,7 @@
 const header=document.querySelector('header');// header Element
 const mainEl=document.querySelector('main');//Main Element
 const footerEl=document.querySelector("footer");//footer Element
-const grilliLogo=document.querySelector('.left-container>img');// logo
+const grilliLogo=document.querySelector('.left-container>img');//Grilli logo
 const rightArrow=document.querySelectorAll('.right-arrow');// to scroll right of the food items
 const leftArrow=document.querySelectorAll('.left-arrow');// to scroll left
 const foodScrollEl=document.querySelectorAll('.food-container-scroll');// used to scroll food items 
@@ -21,7 +21,7 @@ features.forEach((element,index)=>{
 });
 rightArrow.forEach((arrow,index)=>{
     arrow.addEventListener('click',()=>{
-        foodScrollEl[index].scrollLeft+=550;
+        foodScrollEl[index].scrollLeft+=foodScrollEl[index].clientWidth;
         setTimeout(()=>{
             scrollPosition(index);
         },500);
@@ -29,7 +29,7 @@ rightArrow.forEach((arrow,index)=>{
 });
 leftArrow.forEach((arrow,index)=>{
     arrow.addEventListener('click',()=>{
-        foodScrollEl[index].scrollLeft-=500;
+        foodScrollEl[index].scrollLeft-=foodScrollEl[index].clientWidth;
         setTimeout(()=>{
             scrollPosition(index);
         },500);
@@ -40,7 +40,7 @@ foodScrollEl.forEach((scroll,index)=>{
 });
 function scrollPosition(idx){
     const isAtLeft=foodScrollEl[idx].scrollLeft===0;
-    const isAtRight=foodScrollEl[idx].scrollLeft===686.6412353515625 || foodScrollEl[idx].scrollLeft===1276.7176513671875;
+    const isAtRight=foodScrollEl[idx].scrollWidth-foodScrollEl[idx].clientWidth<=Math.ceil(foodScrollEl[idx].scrollLeft);
     if(isAtLeft){
         leftArrow[idx].style.opacity=0.4;
     }else{
@@ -52,7 +52,6 @@ function scrollPosition(idx){
         rightArrow[idx].style.opacity=1;
     }
 }
-
 
 // mobile view 
 const moreOptHeaderEl=document.getElementById('more-opt');
@@ -83,8 +82,8 @@ function headerColorChanger(){ // Changes Color of the Header
         rightHeader.style=`
         color: white;
         `;
-        console.log("rikesh");
         document.documentElement.style.setProperty('--more-opt-bg','rgb(228, 197, 144)');
+        document.documentElement.style.setProperty('--underline-color','rgb(228, 197, 144)');
     }else{
         grilliLogo.src="images/header/grilli-light-black.svg";
         header.classList.remove("black");
@@ -95,6 +94,7 @@ function headerColorChanger(){ // Changes Color of the Header
         rgb(61, 65, 82);
         `;
         document.documentElement.style.setProperty('--more-opt-bg','rgb(61, 65, 82)');
+        document.documentElement.style.setProperty('--underline-color','rgb(252, 128, 25)');
     }
 }
 
@@ -118,13 +118,17 @@ const foodImg=document.querySelector('.foods-orders-container>img');
 const foodDescription=document.querySelector('.food-description');
 const closeOrder=document.querySelector('.close-order');
 const blurItems=document.querySelectorAll("main,footer,header");
+const orderbtn=document.querySelectorAll(".ordering");
+const orderSuccess=document.querySelector(".ordered-successfull-container");
 
-closeOrder.addEventListener("click",()=>{
+closeOrder.addEventListener("click",closeOrderFunc);
+
+function closeOrderFunc(){
     foodDisplayEl.style=`
         left:-50vw;
     `;
     blurBackground();
-});
+}
 function blurBackground(){
     blurItems.forEach((items)=>{
         items.classList.toggle("active-blur");
@@ -140,5 +144,16 @@ foodsEl.forEach((food)=>{
         foodImg.src=food.querySelector('img').src;
         foodDescription.innerHTML=food.querySelector('.description').innerHTML;
         blurBackground();
+    });
+});
+orderbtn.forEach((order)=>{
+    order.addEventListener("click",()=>{
+        closeOrderFunc();
+        orderSuccess.style=`
+            transform: translate(-50%,0%);
+        `;
+        setTimeout(()=>{
+            orderSuccess.style=`transform: translate(-50%,110%);`;
+        },3500);
     });
 });

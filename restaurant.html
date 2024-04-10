@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Forum&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tab.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -33,11 +36,9 @@
                 <div>Menu</div>
             </a>
             <a href="#booking-table">
-                <!-- <i class="fa-solid fa-bowl-food"></i> -->
                 <div>Order</div>
             </a>
-            <a href="../projects/login/login.html" class="signin">
-                <!-- <i class="fa-solid fa-user"></i> -->
+            <a href="login/login.html" class="signin">
                 <div>SignIn</div>
             </a>
 
@@ -57,15 +58,15 @@
                 </a>
                 <div class="more-options-details">
                     <a href="#">Home</a>
-                    <a href="#menu">MENU</a>
+                    <a href="#menu">Menu</a>
                     <a href="#booking-table">
-                        <div>order</div>
+                        Order
                     </a>
-                    <a href="../projects/login/login.html" class="signin">
-                        <div>SignIn</div>
+                    <a href="login/login.html" class="signin">
+                        SignIn
                     </a>
                     <a href="#aboutUs">
-                        <div>About us</div>
+                        About us
                     </a>
                 </div>
                 <div class="visiting-details-container">
@@ -117,42 +118,45 @@
                 </div>
             </div>
             <div class="foods-overview food-container-scroll">
-                <div class="food-types">
-                    <img src="images/foodOverview/Idli.avif" alt="picture">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Biryani_2.avif" alt="picture">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Rolls.avif" alt="roll">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Burger.avif" alt="burger">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Ice_Creams.avif" alt="Ice creams">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Pongal.avif" alt="picture">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Cakes.avif" alt="picture">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Chole_Bature.avif" alt="picture">
-                </div>
-                <div class="food-types">
+                <a href="food-overview.html?name=South Indian" class="food-types">
+                    <img src="images/foodOverview/southindian.avif" alt="picture">
+                </a>
+                <a href="food-overview.html?name=North Indian" class="food-types">
+                    <img src="images/foodOverview/northindian.avif" alt="picture">
+                </a>
+                <a href="food-overview.html?name=Chinese" class="food-types">
+                    <img src="images/foodOverview/chinese.avif" alt="picture">
+                </a>
+                <a href="food-overview.html?name=Dosa" class="food-types">
                     <img src="images/foodOverview/Dosa.avif" alt="picture">
-                </div>
-                <div class="food-types">
+                </a>
+                <a href="food-overview.html?name=Biryani" class="food-types">
+                    <img src="images/foodOverview/Biryani_2.avif" alt="picture">
+                </a>
+                <a href="food-overview.html?name=Idly" class="food-types">
+                    <img src="images/foodOverview/Idli.avif" alt="picture">
+                </a>
+                <a href="food-overview.html?name=Parotta" class="food-types">
                     <img src="images/foodOverview/Parotta.avif" alt="picture">
-                </div>
-                <div class="food-types">
-                    <img src="images/foodOverview/Poori.avif" alt="picture">
-                </div>
-                <div class="food-types">
+                </a>
+                <a href="food-overview.html?name=Rolls" class="food-types">
+                    <img src="images/foodOverview/Rolls.avif" alt="roll">
+                </a>
+                <a href="food-overview.html?name=Burger" class="food-types">
+                    <img src="images/foodOverview/Burger.avif" alt="burger">
+                </a>
+                <a href="food-overview.html?name=Ice Cream" class="food-types">
+                    <img src="images/foodOverview/Ice_Creams.avif" alt="Ice creams">
+                </a>
+                <a href="food-overview.html?name=Cakes" class="food-types">
+                    <img src="images/foodOverview/Cakes.avif" alt="picture">
+                </a>
+                <a href="food-overview.html?name=Juices" class="food-types">
                     <img src="images/foodOverview/Juice.avif" alt="picture">
-                </div>
+                </a>
+                <a href="food-overview.html?name=Shakes" class="food-types">
+                    <img src="images/foodOverview/shakes.avif" alt="picture">
+                </a>
             </div>
         </section>
         <section class="southIndian-container">
@@ -954,217 +958,219 @@
             </div>
         </section>
         <div class="restaurant-details">
-        <div class="booking-table-container">
-            <div class="online-reservation-container" id="booking-table">
-                <div class="reservation-header-container">
-                    <div class="reservation-header">
-                        Online Reservation
-                    </div>
-                    <div class="reservation-call">
-                        Booking request <a href="tel:+919080748147">
-                            +91 (400)123 4567
-                        </a> or fill out the order form
-                    </div>
-                </div>
-                <div class="booking-input-container">
-                    <div class="name-details">
-                        <div class="name">
-                            <input type="text" placeholder="Your Name">
+        <div class="booking-and-features">
+            <div class="booking-table-container">
+                <div class="online-reservation-container" id="booking-table">
+                    <div class="reservation-header-container">
+                        <div class="reservation-header">
+                            Online Reservation
                         </div>
-                        <div class="phone-no">
-                            <input type="tel" placeholder="Phone Number">
+                        <div class="reservation-call">
+                            Booking request <a href="tel:+919080748147">
+                                +91 (400)123 4567
+                            </a> or fill out the order form
                         </div>
                     </div>
-                    <div class="person-details">
-                        <div class="number-of-persons">
-                            <i class="fa-solid fa-user"></i>
-                                <select name="person" id="persons">
-                                <option value="1">
-                                    1 Person
-                                </option>
-                                <option value="2">
-                                    2 Person
-                                </option>
-                                <option value="3">
-                                    3 Person
-                                </option>
-                                <option value="4">
-                                    4 Person
-                                </option>
-                                <option value="5">
-                                    5 Person
-                                </option>
-                                <option value="6">
-                                    6 Person
-                                </option>
-                                <option value="7">
-                                    7 Person
-                                </option>
-                                </select>
-                        </div>
-                        <div class="date">
-                            <input type="date" required placeholder="DD-MM-YYYY">
-                        </div>
-                            <div class="time-container">
-                                <i class="fa-solid fa-clock"></i>
-                                <select name="date" id="date">
-                                    <option value="7">
-                                        07:00 am
-                                    </option>
-                                    <option value="8">
-                                        08:00 am
-                                    </option>
-                                    <option value="9">
-                                        09:00 am
-                                    </option>
-                                    <option value="10">
-                                        10:00 am
-                                    </option>
-                                    <option value="11">
-                                        11:00 am
-                                    </option>
-                                    <option value="12">
-                                        12:00 pm
-                                    </option>
-                                    <option value="13">
-                                        01:00 pm
-                                    </option>
-                                    <option value="14">
-                                        02:00 pm
-                                    </option>
-                                    <option value="15">
-                                        03:00 pm
-                                    </option>
-                                    <option value="16">
-                                        04:00 pm
-                                    </option>
-                                    <option value="17">
-                                        05:00 pm
-                                    </option>
-                                    <option value="18">
-                                        06:00 pm
-                                    </option>
-                                    <option value="19">
-                                        07:00 pm
-                                    </option>
-                                    <option value="20">
-                                        08:00 pm
-                                    </option>
-                                    <option value="21">
-                                        09:00 pm
-                                    </option>
-                                    <option value="22">
-                                        10:00 pm
-                                    </option>
-                                    <option value="23">
-                                        11:00 pm
-                                    </option>
-                                </select>
+                    <div class="booking-input-container">
+                        <div class="name-details">
+                            <div class="name">
+                                <input type="text" placeholder="Your Name">
                             </div>
+                            <div class="phone-no">
+                                <input type="tel" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="person-details">
+                            <div class="number-of-persons">
+                                <i class="fa-solid fa-user"></i>
+                                    <select name="person" id="persons">
+                                    <option value="1">
+                                        1 Person
+                                    </option>
+                                    <option value="2">
+                                        2 Person
+                                    </option>
+                                    <option value="3">
+                                        3 Person
+                                    </option>
+                                    <option value="4">
+                                        4 Person
+                                    </option>
+                                    <option value="5">
+                                        5 Person
+                                    </option>
+                                    <option value="6">
+                                        6 Person
+                                    </option>
+                                    <option value="7">
+                                        7 Person
+                                    </option>
+                                    </select>
+                            </div>
+                            <div class="date">
+                                <input type="date" required placeholder="DD-MM-YYYY">
+                            </div>
+                                <div class="time-container">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <select name="date" id="date">
+                                        <option value="7">
+                                            07:00 am
+                                        </option>
+                                        <option value="8">
+                                            08:00 am
+                                        </option>
+                                        <option value="9">
+                                            09:00 am
+                                        </option>
+                                        <option value="10">
+                                            10:00 am
+                                        </option>
+                                        <option value="11">
+                                            11:00 am
+                                        </option>
+                                        <option value="12">
+                                            12:00 pm
+                                        </option>
+                                        <option value="13">
+                                            01:00 pm
+                                        </option>
+                                        <option value="14">
+                                            02:00 pm
+                                        </option>
+                                        <option value="15">
+                                            03:00 pm
+                                        </option>
+                                        <option value="16">
+                                            04:00 pm
+                                        </option>
+                                        <option value="17">
+                                            05:00 pm
+                                        </option>
+                                        <option value="18">
+                                            06:00 pm
+                                        </option>
+                                        <option value="19">
+                                            07:00 pm
+                                        </option>
+                                        <option value="20">
+                                            08:00 pm
+                                        </option>
+                                        <option value="21">
+                                            09:00 pm
+                                        </option>
+                                        <option value="22">
+                                            10:00 pm
+                                        </option>
+                                        <option value="23">
+                                            11:00 pm
+                                        </option>
+                                    </select>
+                                </div>
+                        </div>
+                        <textarea placeholder="Message"></textarea>
+                        <button class="book-table">
+                            BOOK A TABLE
+                        </button>
                     </div>
-                    <textarea placeholder="Message"></textarea>
-                    <button class="book-table">
-                        BOOK A TABLE
-                    </button>
+                </div>
+                <div class="avalaible-details">
+                    <div class="available-header">
+                        Contact Us
+                    </div>
+                    <div class="booking-request">
+                        <div>
+                            Booking Request
+                        </div>
+                        <a href="tel:+919080748147">
+                            +91 (400) 123 4567
+                        </a>
+                    </div>
+                    <div class="location-details-container">
+                        <div class="location-details">
+                            <div class="location-header">
+                                Location
+                            </div>
+                            <div class="location">
+                                Restaurant St, Delicious City, <br>Chennai 632312, TN
+                            </div>
+                        </div>
+                        <div class="break-fast-details">
+                            <div class="break-fast-header">
+                                Break fast
+                            </div>
+                            <div class="break-fast-timing">
+                                Monday to Sunday <br>07.00 am - 11.00 am
+                            </div>
+                        </div>
+                        <div class="lunch-time-details">
+                            <div class="lunch-time-header">
+                                Lunch Time
+                            </div>
+                            <div class="lunch-timing">
+                                Monday to Sunday<br>
+                                11.00 am - 03.30 pm
+                            </div>
+                        </div>
+                        <div class="dinner-details">
+                            <div class="dinner-head">
+                                Dinner Time
+                            </div>
+                            <div class="dinner-timing">
+                                Monday to Sunday<br>
+                                06:00 pm - 11:00 pm
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="avalaible-details">
-                <div class="available-header">
-                    Contact Us
+            <div class="restaurent-features">
+                <div class="features-head1">
+                    WHY CHOOSE US
                 </div>
-                <div class="booking-request">
-                    <div>
-                        Booking Request
-                    </div>
-                    <a href="tel:+919080748147">
-                        +91 (400) 123 4567
-                    </a>
+                <div class="features-head2">
+                    Our Strength
                 </div>
-                <div class="location-details-container">
-                    <div class="location-details">
-                        <div class="location-header">
-                            Location
+                <div class="features-overview">
+                    <div class="features">
+                        <img src="images/features/features-icon-1.png" alt="picture">
+                        <div class="features-name">
+                            Hygienic Food
                         </div>
-                        <div class="location">
-                            Restaurant St, Delicious City, <br>Chennai 632312, TN
-                        </div>
-                    </div>
-                    <div class="break-fast-details">
-                        <div class="break-fast-header">
-                            Break fast
-                        </div>
-                        <div class="break-fast-timing">
-                            Monday to Sunday <br>07.00 am - 11.00 am
+                        <div class="quotes">
+                            Clean eats makes happy hearts!
                         </div>
                     </div>
-                    <div class="lunch-time-details">
-                        <div class="lunch-time-header">
-                            Lunch Time
+                    <div class="features">
+                        <img src="images/features/features-icon-2.png" alt="picture">
+                        <div class="features-name">
+                            Fresh Environment
                         </div>
-                        <div class="lunch-timing">
-                            Monday to Sunday<br>
-                            11.00 am - 03.30 pm
+                        <div class="quotes">
+                            Clean surroundings makes clear minds.
                         </div>
                     </div>
-                    <div class="dinner-details">
-                        <div class="dinner-head">
-                            Dinner Time
+                    <div class="features">
+                        <img src="images/features/features-icon-3.png" alt="picture">
+                        <div class="features-name">
+                            Skilled Chefs
                         </div>
-                        <div class="dinner-timing">
-                            Monday to Sunday<br>
-                            06:00 pm - 11:00 pm
+                        <div class="quotes">
+                            Masters of the kitchen, maestros of taste.
+                        </div>
+                    </div>
+                    <div class="features">
+                        <img src="images/features/features-icon-4.png" alt="picture">
+                        <div class="features-name">
+                            Event & Party
+                        </div>
+                        <div class="quotes">
+                            Celebrating life's moments at a time.
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="restaurent-features">
-            <div class="features-head1">
-                WHY CHOOSE US
-            </div>
-            <div class="features-head2">
-                Our Strength
-            </div>
-            <div class="features-overview">
-                <div class="features">
-                    <img src="images/features/features-icon-1.png" alt="picture">
-                    <div class="features-name">
-                        Hygienic Food
-                    </div>
-                    <div class="quotes">
-                        Clean eats makes happy hearts!
-                    </div>
+                <div class="feature-quotes">
+                    Come with family & feel the joy of mouthwatering food
                 </div>
-                <div class="features">
-                    <img src="images/features/features-icon-2.png" alt="picture">
-                    <div class="features-name">
-                        Fresh Environment
-                    </div>
-                    <div class="quotes">
-                        Clean surroundings makes clear minds.
-                    </div>
-                </div>
-                <div class="features">
-                    <img src="images/features/features-icon-3.png" alt="picture">
-                    <div class="features-name">
-                        Skilled Chefs
-                    </div>
-                    <div class="quotes">
-                        Masters of the kitchen, maestros of taste.
-                    </div>
-                </div>
-                <div class="features">
-                    <img src="images/features/features-icon-4.png" alt="picture">
-                    <div class="features-name">
-                        Event & Party
-                    </div>
-                    <div class="quotes">
-                        Celebrating life's moments at a time.
-                    </div>
-                </div>
-            </div>
-            <div class="feature-quotes">
-                Come with family & feel the joy of mouthwatering food
             </div>
         </div>
         <div class="special-dish-container">
@@ -1185,7 +1191,7 @@
                     <del>₹450 </del><span>₹299</span>
                 </div>
                 <div class="special-dish-buy">
-                    <button>PLACE ORDER</button>
+                    <button class="btn">PLACE ORDER</button>
                 </div>
             </div>
         </div>
@@ -1203,7 +1209,7 @@
                 <div class="booking">
                     BOOK THROUGH CALL
                 </div>
-                <a href="tel:+919080748147" class="phone">
+                <a href="tel:+919080748147" class="phone btn">
                     +91 (400) 123 4567
                 </a>
             </div>
@@ -1287,6 +1293,10 @@
         <div class="food-description">
         </div>
     </div>
+    <div class="ordered-successfull-container">
+        <div>Ordered Successfully</div>
+        <div>1 Item</div>
+    </div>
 <script src="restaurant.js" type="module"></script>
 </body>
-</html>
+</html> 
