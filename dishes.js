@@ -365,7 +365,7 @@ export const dishes=[
         price:179,
         offer:149,
         description:"Flavored aromatic rice layered with succulent fish in a delicate blend of whole spices; served along with raita and curry.",
-        img:"images/biryani/Fish.avif"  
+        img:"images/biryani/fish.avif"  
     },
     {
         name:"Chicken 65 Biryani",
