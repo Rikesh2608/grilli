@@ -2,7 +2,7 @@ export var foodMap=new Map();
 foodMap.set("dosa",addArray(6,20));
 foodMap.set("idly",addArray(21,30));
 foodMap.set("south indian",addArray(0,53));
-foodMap.set("parotta",addArray(31,43));
+foodMap.set("parotta",addArray(33,43));
 foodMap.set("biryani",addArray(44,53));
 foodMap.set("ice cream",addArray(54,65));
 foodMap.set("juices",addArray(66,78));
@@ -34,3 +34,4 @@ function addArray(start,end){
     }
     return array;
 }
+
