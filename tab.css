@@ -167,6 +167,12 @@
     .ordered-successfull-container{
         width: 100vw;
     }
+    .thanking{
+        min-width: 100vw;
+        min-height: 100vh;
+        padding-inline: 40px;
+        border-radius: 0;
+    }
 }
 
 @media (width<540px) {

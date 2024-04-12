@@ -66,8 +66,8 @@ foodVarieties.forEach((index)=>{
                 <div class="ratings">${dish.rating}</div>
                 </div>
                 <div class="price">
-                    <del>₹${dish.price}</del>
-                    <div>₹${dish.offer}</div>
+                    <del>₹${dish.realPrice}</del>
+                    <div>₹${dish.currPrice}</div>
                 </div>
             </div>
             <div class="description">
@@ -82,16 +82,15 @@ foodsContainerEl.innerHTML=foodHtml;
 headerDescriptionEl.innerHTML=headerDescription.get(foodName.toLowerCase());
 
 const foodsEl=document.querySelectorAll(".foods-overview");
-// document.documentElement.style.setProperty('--food-name-width',`calc(${foodsEl[0].querySelector(".food-details").offSetWidth}-30px)`);
 const foodDisplayEl=document.querySelector(".foods-orders-container");
 const foodPrice=document.querySelector('.foods-orders-container .price');
 const foodNameEl=document.querySelector('.foodName');
 const foodImg=document.querySelector('.foods-orders-container>img');
 const foodDescription=document.querySelector('.food-description');
 const closeOrder=document.querySelector('.close-order');
-const blurItems=document.querySelectorAll("main,footer,header");
 const orderbtn=document.querySelectorAll(".ordering");
 const orderSuccess=document.querySelector(".ordered-successfull-container");
+const overlayEl=document.querySelector(".overlay")
 
 closeOrder.addEventListener("click",closeOrderFunc);
 
@@ -102,10 +101,12 @@ function closeOrderFunc(){
     blurBackground();
 }
 function blurBackground(){
-    blurItems.forEach((items)=>{
-        items.classList.toggle("active-blur");
-    }); 
+    overlayEl.classList.toggle("active");
 }
+
+overlayEl.addEventListener("click",()=>{
+    closeOrderFunc();
+});
 foodsEl.forEach((food)=>{
     food.addEventListener("click",()=>{
         foodDisplayEl.style=`

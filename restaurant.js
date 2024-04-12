@@ -120,6 +120,7 @@ const closeOrder=document.querySelector('.close-order');
 const blurItems=document.querySelectorAll("main,footer,header");
 const orderbtn=document.querySelectorAll(".ordering");
 const orderSuccess=document.querySelector(".ordered-successfull-container");
+const overlayEl=document.querySelector(".overlay");
 
 closeOrder.addEventListener("click",closeOrderFunc);
 
@@ -130,9 +131,7 @@ function closeOrderFunc(){
     blurBackground();
 }
 function blurBackground(){
-    blurItems.forEach((items)=>{
-        items.classList.toggle("active-blur");
-    }); 
+    overlayEl.classList.toggle("active");
 }
 foodsEl.forEach((food)=>{
     food.addEventListener("click",()=>{
@@ -156,4 +155,42 @@ orderbtn.forEach((order)=>{
             orderSuccess.style=`transform: translate(-50%,110%);`;
         },3500);
     });
+});
+
+const bookTablebtn=document.querySelector(".book-table");
+const thankingEl=document.querySelector(".thanking");
+const thankBack=thankingEl.querySelector(".go-back");
+
+overlayEl.addEventListener("click",()=>{
+    closeOrderFunc();
+    thankingEl.style=`
+    transform: translate(-50%,-50%) scale(0);
+    `;
+});
+
+thankBack.addEventListener("click",()=>{
+    thankingEl.style=`
+    transform: translate(-50%,-50%) scale(0);
+    `;
+    blurBackground();
+});
+
+const date=document.getElementById("date");
+const today=new Date();
+date.value=today.toISOString().substr(0, 10);
+bookTablebtn.addEventListener("click",(event)=>{
+    const phone=document.getElementById("phone");
+    const name=document.getElementById("name");
+    const phoneReg=(/^[6-9]{1}[0-9]{9}$/);
+    const nameReg=(/^[a-zA-Z0-9 ]{3,}$/);
+    if(phoneReg.test(phone.value) && nameReg.test(name.value) ){
+        event.preventDefault();
+        thankingEl.style=`
+        transform: translate(-50%,-50%) scale(1);
+        `;  
+        blurBackground();
+        name.value="";
+        phone.value="";
+        date.value=today.toISOString().substr(0,10);
+    }
 });
