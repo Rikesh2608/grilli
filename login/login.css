@@ -3,9 +3,10 @@
 }
 body{
     margin: 0;
-    background: linear-gradient(90deg,#6d05b3 0%,#f8aaaa 46%,#700069 100%);
     background: linear-gradient(90deg, rgb(111, 81, 209), rgb(194, 174, 253) 95.83%) ;
+    background: linear-gradient(90deg,#6d05b3 0%,#f8aaaa 46%,#700069 100%);
     min-height: 100vh;
+    overflow: hidden;
     font-family: 'poppins',sans-serif;
     display: flex;
     align-items: center;
@@ -99,10 +100,8 @@ img{
     font-family: 'poppins';
     transition: .3s;
 }
-
 button:hover{
-    box-shadow: 0 5px 10px rgba(0,0,0,1);
-    transform: translateY(-5px) scale(1.1);
+    background-color: rgb(64, 0, 255);
 }
 .login-create{
     margin-right: 80px;
@@ -122,8 +121,7 @@ button:hover{
     cursor: pointer;
     transition: .2s;
 }
-
 .login-foot div:hover,.signup-foot:hover{
     filter: brightness(2);
-    transform:scale(1.1);
+    transform:scale(1.03);
 }   

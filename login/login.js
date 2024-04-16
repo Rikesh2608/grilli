@@ -122,7 +122,7 @@ function sign_up(){
         accounts.forEach((value)=>{
             if(value.mail==mail){
                 matching=1;
-            signup_foot.innerHTML=`Email Already exists !!`;
+                signup_foot.innerHTML=`Email Already exists !!`;
             }
         });
         if(!matching){

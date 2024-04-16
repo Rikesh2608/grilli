@@ -1,7 +1,7 @@
 import { foodMap as foodRelations} from "./dish-relations.js";
 import { dishes } from "./dishes.js";
 import { foodDescription as headerDescription } from "./dish-relations.js";
-
+import { cartProducts } from "./dish-relations.js";
 
 const header=document.querySelector("header");
 const mainEl=document.querySelector("main");
@@ -30,23 +30,20 @@ closeMoreOpt.addEventListener("click",()=>hideMoreOptions());
 moreOptHeaderEl.addEventListener("click",()=>showMoreOptions());
 function showMoreOptions(){// To show Mobile View Options
     morOpt.style=`transform:translateX(0%)`;
-    mainEl.classList.add("active-blur");
-    footerEl.classList.add("active-blur");
 }
 function hideMoreOptions(){// to hide Mobile view Options
     morOpt.style=`transform:translateX(-100%)`;
-    mainEl.classList.remove("active-blur");
-    footerEl.classList.remove("active-blur");
 }
 
 const foodsContainerEl=document.querySelector(".foods-overview-container");
 var foodHtml='';
 const foodName = new URLSearchParams(window.location.search).get("name");
-console.log(foodName)
 const foodHeaderEl=document.querySelector(".food-header>h1");
 const headerDescriptionEl=document.querySelector(".food-header>div");
 const foodVarieties=foodRelations.get(foodName.toLocaleLowerCase());
+var selectedDish;
 
+// inserting food
 foodVarieties.forEach((index)=>{
     var dish=dishes[index];
     foodHtml+=`
@@ -88,8 +85,9 @@ const foodNameEl=document.querySelector('.foodName');
 const foodImg=document.querySelector('.foods-orders-container>img');
 const foodDescription=document.querySelector('.food-description');
 const closeOrder=document.querySelector('.close-order');
-const orderbtn=document.querySelectorAll(".ordering");
+const orderbtn=document.querySelector(".ordering");
 const orderSuccess=document.querySelector(".ordered-successfull-container");
+const totalOrderEl=orderSuccess.querySelector(".total-orders");
 const overlayEl=document.querySelector(".overlay")
 
 closeOrder.addEventListener("click",closeOrderFunc);
@@ -112,23 +110,41 @@ foodsEl.forEach((food)=>{
         foodDisplayEl.style=`
             left:50vw;
         `;
-        foodNameEl.innerHTML=food.querySelector('.food-name').innerHTML;
-        foodPrice.innerHTML=food.querySelector(`.price>div`).innerHTML;
-        foodImg.src=food.querySelector('.food-order>img').src;
-        foodDescription.innerHTML=food.querySelector('.description').innerHTML;
+        selectedDish={
+            name:food.querySelector('.food-name').textContent.trim(),
+            description:food.querySelector('.description').textContent.trim(),
+            img:food.querySelector('img').src,
+            realPrice:Number(food.querySelector('.price>del').textContent.substring(1)),
+            currPrice:Number(food.querySelector(`.price>div`).textContent.substring(1)),
+            rating:food.querySelector('.ratings-container>div:last-child').textContent.trim(),
+            quantity:1
+        };
+        foodNameEl.innerHTML=selectedDish.name;
+        foodPrice.innerHTML="₹"+selectedDish.currPrice;
+        foodImg.src=selectedDish.img;
+        foodDescription.innerHTML=selectedDish.description;
         blurBackground();
     });
 });
-orderbtn.forEach((order)=>{
-    order.addEventListener("click",()=>{
-        closeOrderFunc();
-        orderSuccess.style=`
-            transform: translate(-50%,0%);
-        `;
-        setTimeout(()=>{
-            orderSuccess.style=`transform: translate(-50%,110%);`;
-        },3500);
-    });
+orderbtn.addEventListener("click",()=>{
+    closeOrderFunc();
+    orderSuccess.style=`
+        transform: translate(-50%,0%);
+    `;
+    var idx=cartProducts.findIndex(dish=>dish.name==selectedDish.name)
+    if(idx!=-1){
+        if(cartProducts[idx].quantity<10){
+            console.log(cartProducts[idx]);
+            cartProducts[idx].quantity++;
+        }
+    }else{
+        cartProducts.push(selectedDish);
+    }
+    localStorage.setItem("cartProducts",JSON.stringify(cartProducts));
+    totalOrderEl.innerHTML=`${cartProducts.length} item${cartProducts.length>1?"s":""} Added`;
+    setTimeout(()=>{
+        orderSuccess.style=`transform: translate(-50%,110%);`;
+    },4500);
 });
 
 

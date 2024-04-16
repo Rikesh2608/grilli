@@ -136,12 +136,12 @@ export const dishes=[
         img:"images/southIndian/pizzadosa.avif"
     },
     {
-        name:"Pasta Dosa",
+        name:"Butter Dosa",
         rating:4.2,
-        realPrice:130,
-        currPrice:109,
-        description:"Experience a delectable indulgence with this unique fusion of traditional Italian pasta and classic Indian dosa, offering a tantalizing culinary journey.",
-        img:"images/southIndian/pastadosa.avif"
+        realPrice:70,
+        currPrice:49,
+        description:"Crispy Golden Butter Dosa",
+        img:"images/southIndian/butter.avif"
     },
     {
         name:"Ghee Podi Dosa",
@@ -360,6 +360,14 @@ export const dishes=[
         img:"images/biryani/veg.avif"  
     },
     {
+        name:"Kushka",
+        rating:4.3,
+        realPrice:109,
+        currPrice:79,
+        description:"Kushka served with Onion Raita and Brinjal Gravy",
+        img:"images/biryani/kushka.avif"  
+    },
+    {
         name:"Egg Biryani",
         rating:4.5,
         realPrice:149,
@@ -425,11 +433,51 @@ export const dishes=[
     },
     {
         name:"Prawn Biryani",
-        rating:4.2,
-        realPrice:199,
-        currPrice:179,
-        description:"A delectable creation of succulent prawns blended with aromatic spices, cooked to perfection and layered with fragrant basmati rice.",
-        img:"images/biryani/prawn.avif"  
+        rating:4.9,
+        realPrice:170,
+        currPrice:169,
+        description:"A delicious concoction of marinated prawns and slow-cooked aromatic rice with a delectable blend of whole spices",
+        img:"images/biryani/b1.avif"
+    },
+    {
+        name:"Mushroom Biryani",
+        rating:4.9,
+        realPrice:110,
+        currPrice:105,
+        description:"Hot and flouverd Mushroom Biryani.",
+        img:"images/biryani/b2.avif"
+    },
+    {
+        name:"Royal Boneless Chicken Biryani",
+        rating:4.8,
+        realPrice:240,
+        currPrice:235,
+        description:"Royal Boneless Chicken Biryani!",
+        img:"images/biryani/b3.avif"
+    },
+    {
+        name:"Mini Bucket Chicken Biryani[3pax]",
+        rating:4.5,
+        realPrice:950,
+        currPrice:845,
+        description:"3 Pcs Boiled Egg ,Chettinad Gravy,Onion Raitha",
+        img:"images/biryani/b4.avif"
+    },
+    {
+        name:"Spicy Lollipop Biryani",
+        rating:4.7,
+        realPrice:220,
+        currPrice:217,
+        description:"Three peppery chicken lollipops, atop our biryani rice. Served with raita, brinjal, and bread halwa.",
+        img:"images/biryani/b5.avif"
+    },
+    {
+        name:"Beef Biryani",
+        rating:4.9,
+        realPrice:140,
+        currPrice:125,
+        description:"A savory and aromatic main course featuring tender beef and flavorful rice",
+        img:"images/biryani/b6.avif"
     },
     {
         name:"Chocolate Ice Cream",
@@ -539,7 +587,7 @@ export const dishes=[
         name:"Rose Milk",
         rating:4.9,
         realPrice:50,
-        currPrice:400,
+        currPrice:40,
         description:"A refreshing and creamy milkshake bursting with the delicate flavor of roses.",
         img:"images/juice/juice12.avif"
     },
@@ -1182,5 +1230,69 @@ export const dishes=[
         currPrice:100,
         description:"A refreshing and creamy blend of summer flavors, guaranteed to keep you in the rhythm of the season.",
         img:"images/shakes/shake10.avif"
+    },
+    {
+        name:"Veg Shawarma Roll",
+        rating:4.2,
+        realPrice:70,
+        currPrice:50,
+        description:"A light roll high on the goodness of veggies.",
+        img:"images/rolls/veg.avif"
+    },
+    {
+        name:"Chicken Shawarma Roll",
+        rating:4.4,
+        realPrice:110,
+        currPrice:80,
+        description:"Chicken wrapped in flatbread with mayo and capsicums",
+        img:"images/rolls/chickenshawarma.avif"
+    },
+    {
+        name:"Mexican Chicken Shawarma Roll",
+        rating:4.6,
+        realPrice:140,
+        currPrice:120,
+        description:"Grilled chicken seasoned with Mexican spices",
+        img:"images/rolls/mexicanchickenshawarma.avif"
+    },
+    {
+        name:"Chicken Tikka Paratha Roll",
+        rating:4.4,
+        realPrice:140,
+        currPrice:120,
+        description:"Chicken marinated with a blend of spices and grilled till succulent & tender is filled in a freshly rolled out warm paratha along with crisp veggies to make this delicious street food snack.",
+        img:"images/rolls/chickentikkarumali.avif"
+    },
+    {
+        name:"Chicken Dejaj Tawas Roll",
+        rating:4.8,
+        realPrice:160,
+        currPrice:140,
+        description:"Grilled chicken wrapped in flatbread with savory accompaniments like tahini sauce and vegetables.",
+        img:"images/rolls/chickendejas.avif"
+    },
+    {
+        name:"Paneer Paratha Roll",
+        rating:4.1,
+        realPrice:100,
+        currPrice:85,
+        description:"Perfectly marinated and grilled paneer is wrapped in a paratha along with fresh veggies and served with chutney",
+        img:"images/rolls/paneerpartha.avif"
+    },
+    {
+        name:"Mutton Laham Tawas Roll",
+        rating:4.3,
+        realPrice:160,
+        currPrice:140,
+        description:"Middle Eastern-style grilled mutton wrapped in flatbread with traditional seasonings and garnishes",
+        img:"images/rolls/mutton.avif"
+    },
+    {
+        name:"Chicken Shawarma Paratha Roll",
+        rating:4.5,
+        realPrice:160,
+        currPrice:140,
+        description:"Chicken with slices of fresh onion and capsicum inside a healthy paratha.",
+        img:"images/rolls/chickenshawarmapartha.avif"
     },
 ];

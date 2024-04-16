@@ -1,28 +1,31 @@
 @media (width>1200px){
     body{
-        padding-top: 120px;
+        padding-top: 80px;
+    }
+    header{
+        padding-inline: 50px;
     }
     .ordering-template>img{
         max-width: 30%;
     }
     .left-container>img{
-        max-width: 220px;
-        padding: 20px 0;
+        max-width: 180px;
+        padding: 5px 0;
     }
     .right-container{
-        font-size: 24px;
-        gap: 40px;
+        gap: 30px;
+        font-size: 18px;
     }
     .foods-overview>a{
-        min-width: 190px;
+        min-width: 170px;
         gap: 0;
     }
     .southIndian-foods-overview>div>img,.dessert-overview>div>img,.chinese-food>img,.grill>img{
-        width: 370px;
-        height: 250px;
+        width: 300px;
+        height: 200px;
     }
     .food-name{
-        width: 350px;
+        width: 300px;
     }
     .booking-input-container>textarea{
         height: 150px;
