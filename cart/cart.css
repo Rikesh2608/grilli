@@ -412,8 +412,8 @@ main
     justify-content: center;
 }
 .minus.blur,.plus.blur{
-    color: rgb(131, 131, 131);
-    border-color: rgb(131, 131, 131);
+    color: rgb(184, 180, 180);
+    border-color: rgb(186, 183, 183);
 }
 .quantity{
     display: flex;
@@ -577,7 +577,6 @@ footer a:hover{
     cursor: pointer;
 }
 
-
 /* 
 ................
 ................
@@ -732,8 +731,7 @@ Other Elements
     font-weight: 300;
     font-size: 15px;
 }
-
-.payment-success-container{
+.payment-success-container,.invoice-container{
     width: 550px;
     max-width: 700px;
     font-family: 'Ubuntu';
@@ -741,7 +739,6 @@ Other Elements
     top: 50%;
     left: 50%;
     background-color: white;
-    filter: contrast(2);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -775,4 +772,7 @@ Other Elements
 }
 .payment-success-container.payment-done{
     scale: 1;
+}
+.invoice-container{
+    scale: 0;
 }

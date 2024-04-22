@@ -1,5 +1,4 @@
 import { cartProducts } from "./dish-relations.js";
-console.log(cartProducts);
 
 const header=document.querySelector('header');// header Element
 const mainEl=document.querySelector('main');//Main Element
@@ -162,7 +161,6 @@ orderbtn.addEventListener("click",()=>{
     var idx=cartProducts.findIndex(dish=>dish.name==selectedDish.name)
     if(idx!=-1){
         if(cartProducts[idx].quantity<10){
-            console.log(cartProducts[idx]);
             cartProducts[idx].quantity++;
         }
     }else{
@@ -175,9 +173,23 @@ orderbtn.addEventListener("click",()=>{
     },5000);
 });
 
-const bookTablebtn=document.querySelector(".book-table");
 const thankingEl=document.querySelector(".thanking");
 const thankBack=thankingEl.querySelector(".go-back");
+const tableBookingEl=document.querySelector(".booking-input-container");
+const date=document.getElementById("date");
+const todayDate=new Date();
+date.value=`${todayDate.getFullYear()}-${(todayDate.getMonth()+1)<10?("0"+(todayDate.getMonth()+1)):(todayDate.getMonth()+1)}-${todayDate.getDate()}`;
+
+tableBookingEl.addEventListener("submit",(event)=>{
+    event.preventDefault()
+    console.log("rikesh");
+    thankingEl.style=`
+    transform: translate(-50%,-50%) scale(1);
+    `;  
+    blurBackground();
+    tableBookingEl.getElementById("name").value="";
+    tableBookingEl.getElementById("phone").value="";
+})
 
 overlayEl.addEventListener("click",()=>{
     closeOrderFunc();
@@ -193,22 +205,38 @@ thankBack.addEventListener("click",()=>{
     blurBackground();
 });
 
-const date=document.getElementById("date");
-const today=new Date();
-date.value=today.toISOString().substr(0, 10);
-bookTablebtn.addEventListener("click",(event)=>{
-    const phone=document.getElementById("phone");
-    const name=document.getElementById("name");
-    const phoneReg=(/^[6-9]{1}[0-9]{9}$/);
-    const nameReg=(/^[a-zA-Z0-9 ]{3,}$/);
-    if(phoneReg.test(phone.value) && nameReg.test(name.value) ){
-        event.preventDefault();
-        thankingEl.style=`
-        transform: translate(-50%,-50%) scale(1);
-        `;  
-        blurBackground();
-        name.value="";
-        phone.value="";
-        date.value=today.toISOString().substr(0,10);
+// Special dish
+const specialDishEl=document.querySelector(".special-dish-container");
+const placeOrderBtn=specialDishEl.querySelector("button");
+
+placeOrderBtn.addEventListener("click",()=>{
+    selectedDish={
+        name:"Lobster Tortellini",
+        description:"Indulge in the luxurious pleasure of lobster tortellini, where each bite is a journey to the depths of flavor and refinement",
+        img:specialDishEl.querySelector('img').src,
+        realPrice:Number(450),
+        currPrice:Number(299),
+        rating:5.0,
+        quantity:1
     }
+    orderSuccess.style=`
+        transform: translate(-50%,0%);
+    `;
+    var idx=cartProducts.findIndex(dish=>dish.name==selectedDish.name)
+    if(idx!=-1){
+        if(cartProducts[idx].quantity<10){
+            cartProducts[idx].quantity++;
+        }
+    }else{
+        cartProducts.push(selectedDish);
+    }
+    localStorage.setItem("cartProducts",JSON.stringify(cartProducts));
+    totalOrderEl.innerHTML=`${cartProducts.length} Item${cartProducts.length>1?"s":""} Added`;
+    setTimeout(()=>{
+        orderSuccess.style=`transform: translate(-50%,110%);`;
+    },5000);
 });
+
+// Footer 
+const copyRightEl=footerEl.querySelector(".copyrights>span");
+copyRightEl.innerHTML=todayDate.getFullYear()

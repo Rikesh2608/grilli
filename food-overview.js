@@ -148,10 +148,12 @@ orderbtn.addEventListener("click",()=>{
 });
 
 
+shuffleArray([1,2,3,4,5,6]);
 function shuffleArray(array) {
     function random(){
         return Math.random()-0.5;
     }
     array.sort(random);
+    console.log(array.toString());
     return array;
-}
+} 

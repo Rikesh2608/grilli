@@ -265,7 +265,6 @@ Main
 ........
 .........
 */
-
 main{
     margin: 0 25px 40px 25px;
     display: flex;
@@ -278,7 +277,6 @@ main{
     transition: .3s;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 .food-header>h1{
     font-size: 36px;

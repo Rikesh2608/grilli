@@ -3,6 +3,9 @@
         width: 400px;
         max-width: 400px;
     }
+    .buy-now,.go-back{
+        padding-block: 15px;
+    }
 }
 @media (width<950px) {
     .order-container{
@@ -93,9 +96,6 @@
     }
 }
 @media (width<560px) {
-    .no-order{
-        height: 82.5vh;
-    }
     .name-price-details{
         gap: 8px;
     }

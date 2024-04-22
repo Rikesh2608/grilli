@@ -393,9 +393,6 @@ main.active-blur,header.active-blur,footer.active-blur{
     flex-direction: column;
     gap: 30px;
 }
-.ordering-template>div>svg{
-    width: 80%;
-}
 .food-header{
     padding: 0 10px ;
     display: flex;
@@ -435,6 +432,9 @@ main.active-blur,header.active-blur,footer.active-blur{
     scrollbar-width: none;
     scroll-behavior: smooth;
     scroll-snap-align: x mandatory;
+}
+.food-container-scroll::-webkit-scrollbar,.more-options-container::-webkit-scrollbar{
+    display: none;
 }
 .food-types{
     min-height: 130px;

@@ -5,8 +5,18 @@
     header{
         padding-inline: 50px;
     }
+    .ordering-template{
+        justify-content: space-between;
+        padding-inline: 100px;
+    }
+    .ordering-template>div{
+        gap: 50px;
+        font-size: 60px;
+        line-height: 65px;
+        max-width: 500px;
+    }
     .ordering-template>img{
-        max-width: 30%;
+        max-width: 40%;
     }
     .left-container>img{
         max-width: 180px;
